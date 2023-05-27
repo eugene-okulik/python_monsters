@@ -16,7 +16,7 @@ my_dict['dict'].pop(2)
 my_dict['set'].add('new_element')
 my_dict['set'].remove(5.98)
 # edit str
-print(my_dict['str'][:9])
+print(my_dict['str'][:8])
 print(len(my_dict['str']))
 print(my_dict['str'][43:43 + 4])
 print(my_dict['str'][::3])
