@@ -35,7 +35,7 @@ my_dict = {"tuple": (True, False, [1, 2], (1, 2), 1),
 print((my_dict["tuple"])[1:])
 my_dict["list"].append("кот")
 my_dict["list"].pop(1)
-my_dict["dict"]["i am a tuple"] = 1
+my_dict["dict"][("i am a tuple", )] = 1
 my_dict["dict"].pop(0)
 (my_dict["set"]).add(1)
 (my_dict["set"]).remove(1)
