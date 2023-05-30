@@ -3,5 +3,5 @@ def products(x):
     print('one more')
     print('Thats all')
 
-print(list(products(1)))
 
+print(list(products(1)))
