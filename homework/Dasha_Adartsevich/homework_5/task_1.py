@@ -1,5 +1,5 @@
-my_string = 'Etiam tincidunt neque erat, quis molestie enim imperdiet vel. Integer urna nisl, ' \
-          'facilisis vitae semper at, dignissim vitae libero'
+my_string = 'Etiam tincidunt neque erat, quis molestie enim imperdiet vel. Integer urna nisl, facilisis vitae semper ' \
+            'at, dignissim vitae libero'
 my_list = my_string.split()
 text_with_ing = ''
 for word in my_list:
