@@ -11,7 +11,7 @@ print(random.randrange(1, 50, 3))
 my_list = ['first', 'second', 'third']
 print(random.choice(my_list))
 
-a = 1/3
+a = 1 / 3
 print(round(a, 2))
 
 b = -1
@@ -29,7 +29,7 @@ print(my_list2)
 print(max(my_list2))
 print(min(my_list2))
 print(sum(my_list2))
-print(sum(my_list2)/len(my_list2))  # среднее арифметическое
+print(sum(my_list2) / len(my_list2))  # среднее арифметическое
 
 for i, word in enumerate(my_list):
     # print(word)
