@@ -7,8 +7,8 @@
 # Cделайте так, чтобы каждый ключ печатался в одной строке (как в примере)
 # Помните, что копипаст одного и того же кода - плохо
 def dict_func_task(words):
-    for item in words.items():
-        print(item[0] * item[1])
+    for key, value in words.items():
+        print(key * value)
 
 
 dict_func_task(words={'I': 3, 'love': 5, 'Python': 1, '!': 50})
