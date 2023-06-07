@@ -7,12 +7,18 @@ import operator
 
 
 def possibility_of_user_numbers(*args):
-    sum_user_number = operator.mul(*args)
-    if sum_user_number >= 20:
-        number_result = sum_user_number * 2
+    multiply_user_number = operator.mul(*args)
+
+    def multiply_by_two(multiply_users_number):
+        print(multiply_users_number * 2)
+
+    def multiply_by_three(sum_user_number):
+        print(sum_user_number * 2)
+
+    if multiply_user_number >= 20:
+        multiply_by_two(multiply_user_number)
     else:
-        number_result = sum_user_number * 3
-    print(number_result)
+        multiply_by_three(multiply_user_number)
 
 
 number_sequence = [int(input("Input your number: ")) for _ in range(2)]
