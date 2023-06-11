@@ -6,19 +6,16 @@
 import operator
 
 
-def possibility_of_user_numbers(*args):
-    multiply_users_number = operator.mul(*args)
+def possibility_of_user_numbers(*numbers):
+    multiply_users_number = operator.mul(*numbers)
 
-    def multiply_by_two(multiply_users_number):
-        print(multiply_users_number * 2)
-
-    def multiply_by_three(multiply_users_number):
-        print(multiply_users_number * 3)
+    def mult_number(*number):
+        print(multiply_users_number * number[0])
 
     if multiply_users_number >= 20:
-        multiply_by_two(multiply_users_number)
+        mult_number(2)
     else:
-        multiply_by_three(multiply_users_number)
+        mult_number(3)
 
 
 number_sequence = [int(input("Input your number: ")) for _ in range(2)]
