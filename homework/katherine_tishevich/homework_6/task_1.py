@@ -7,6 +7,7 @@ import operator
 
 
 def possibility_of_user_numbers(*numbers):
+    """my solutions"""
     multiply_users_number = operator.mul(*numbers)
 
     def mult_number(*number):
@@ -20,3 +21,16 @@ def possibility_of_user_numbers(*numbers):
 
 number_sequence = [int(input("Input your number: ")) for _ in range(2)]
 possibility_of_user_numbers(*number_sequence)
+
+
+def multiply(x, y):
+    """solutions from lesson"""
+    return x * y
+
+
+first_mul = multiply(*number_sequence)
+if first_mul > 20:
+    result = multiply(first_mul, 2)
+else:
+    result = multiply(first_mul, 3)
+print(result)
