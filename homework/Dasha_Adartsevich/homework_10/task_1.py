@@ -23,7 +23,7 @@ class Book:
 
 book_1 = Book(name='Мастер и Маргарита', author='Булгаков', number_of_pages=500, isbn=456, reservation=False)
 book_2 = Book(name='Повелитель мух', author='Голдинг', number_of_pages=250, isbn=478, reservation=False)
-book_3 = Book(name='Мартин Иден',author='Лондон', number_of_pages=354, isbn=67895, reservation=False)
+book_3 = Book(name='Мартин Иден', author='Лондон', number_of_pages=354, isbn=67895, reservation=False)
 book_4 = Book(name='Грозовой перевал', author='Бронте', number_of_pages=645, isbn=10908, reservation=False)
 book_5 = Book(name='Убить пересмешника', author='Харпер Ли', number_of_pages=284, isbn=4569087, reservation=True)
 
