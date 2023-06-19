@@ -72,9 +72,9 @@ class SchoolBooks(Book):
     def __str__(self):
         if self.check_reserve_book():
             return f'Название: {self.book_name}, Автор: {self.author}, страниц: {self.page_count}, предмет: ' \
-               f'{self.subject}, класс: {self.level}, зарезервирована'
+                   f'{self.subject}, класс: {self.level}, зарезервирована'
         return f'Название: {self.book_name}, Автор: {self.author}, страниц: {self.page_count}, предмет: ' \
-            f'{self.subject}, класс: {self.level}'
+               f'{self.subject}, класс: {self.level}'
 
 
 first_lesson_book = SchoolBooks(book_name="Music", author="Rohmaninov", page_count=100, isbn='12323239',
