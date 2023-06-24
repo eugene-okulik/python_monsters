@@ -66,4 +66,3 @@ print(bouquet_1.sort_flowers_by_freshness())
 print(bouquet_1.sort_flowers_by_price())
 print(bouquet_1.sort_flowers_by_length())
 print(bouquet_1.find_flower(7))
-
