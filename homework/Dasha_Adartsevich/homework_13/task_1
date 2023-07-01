@@ -1,0 +1,39 @@
+insert into students (name, second_name) values ('Dasha', 'Adartsevich')
+insert into `groups` (title, start_date, end_date) values ('da_group', '01-09-2022', '25-08-2024')
+update students set group_id = 5 where id = 5
+insert into books (title, taken_by_student_id) values ('War and Peace', 5)
+insert into books (title, taken_by_student_id) values ('American Tragedy', 5)
+insert into books (title, taken_by_student_id) values ('Software Testing', 5)
+insert into subjects (title) values ('english')
+insert into subjects (title) values ('philosophy')
+insert into subjects (title) values ('economy')
+insert into lessons (title, subject_id) values ('articles', 2)
+insert into lessons (title, subject_id) values ('London sightseeing', 2)
+insert into lessons (title, subject_id) values ('social philosophy', 3)
+insert into lessons (title, subject_id) values ('metaphysics', 3)
+insert into lessons (title, subject_id) values ('financial economics', 4)
+insert into lessons (title, subject_id) values ('markets', 4)
+insert into marks (student_id, lesson_id, mark) values (5, 2, 8)
+insert into marks (student_id, lesson_id, mark) values (5, 3, 10)
+insert into marks (student_id, lesson_id, mark) values (5, 4, 6)
+insert into marks (student_id, lesson_id, mark) values (5, 5, 8)
+insert into marks (student_id, lesson_id, mark) values (5, 6, 9)
+insert into marks (student_id, lesson_id, mark) values (5, 7, 7)
+
+select * from marks where student_id = 5
+select * from books where taken_by_student_id = 5
+
+select marks.mark, subjects.title from marks
+join lessons
+on marks.lesson_id = lessons.id
+join subjects
+on lessons.subject_id = subjects.id
+where marks.student_id = 5
+
+select students.name, students.second_name, `groups`.title, books.title, marks.mark, lessons.title, subjects.title from students
+join `groups` on students.group_id = `groups`.id
+join books on students.id = books.taken_by_student_id
+join marks on students.id = marks.student_id
+join lessons on marks.lesson_id = lessons.id
+join subjects on lessons.subject_id = subjects.id
+where students.id = 5
