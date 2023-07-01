@@ -9,6 +9,12 @@ class Flowers:
         self.length = length
         self.price = price
 
+    def __str__(self):
+        return f'{self.name}: freshness {self.freshness}, length {self.length}, price {self.price}'
+
+    def __repr__(self):
+        return f'{self.name}: freshness {self.freshness}, length {self.length}, price {self.price}'
+
 
 class Rose(Flowers):
     color = 'red'
@@ -42,16 +48,13 @@ class Bouquet:
         return bouquet_age
 
     def sort_flowers_by_freshness(self):
-        freshness_list = [flower.freshness for flower in self.flowers]
-        return sorted(freshness_list)
+        return sorted(self.flowers, key=lambda flower: flower.freshness)
 
     def sort_flowers_by_length(self):
-        length_list = [flower.length for flower in self.flowers]
-        return sorted(length_list)
+        return sorted(self.flowers, key=lambda flower: flower.length)
 
     def sort_flowers_by_price(self):
-        price_list = [flower.price for flower in self.flowers]
-        return sorted(price_list)
+        return sorted(self.flowers, key=lambda flower: flower.price)
 
     def find_flower(self, age):
         for flower in bouquet_1.flowers:
