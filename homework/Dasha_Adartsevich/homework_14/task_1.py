@@ -2,11 +2,11 @@ import mysql.connector as mysql
 
 
 db = mysql.connect(
-   host='db-mysql-fra1-09136-do-user-7651996-0.b.db.ondigitalocean.com',
-   port=25060,
-   user='user3',
-   passwd='AVNS_iuMmW_up9nn-E9szNOR',
-   database='monstro'
+    host='db-mysql-fra1-09136-do-user-7651996-0.b.db.ondigitalocean.com',
+    port=25060,
+    user='user3',
+    passwd='AVNS_iuMmW_up9nn-E9szNOR',
+    database='monstro'
 )
 
 cursor = db.cursor(dictionary=True)
@@ -22,8 +22,8 @@ print(cursor.fetchall())
 #  insert books
 query = 'INSERT INTO books (title, taken_by_student_id) VALUES (%s, %s)'
 values = [
-   ('Python lessons', '30'),
-   ('Python programming', '30')
+    ('Python lessons', '30'),
+    ('Python programming', '30')
 ]
 cursor.executemany(query, values)
 cursor.execute('SELECT * FROM books')
