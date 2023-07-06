@@ -1,0 +1,81 @@
+Denis@qap:~$ cd /dev
+Denis@qap:/dev$ ls -la
+Denis@qap:/dev$ stat /dev/null
+  File: /dev/null - СИМВОЛЬНЫЕ УСТРОЙСТВА
+  Size: 0               Blocks: 0          IO Block: 4096   character special file
+Device: 6h/6d   Inode: 6           Links: 1     Device type: 1,3
+Access: (0666/crw-rw-rw-)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2023-06-29 05:33:48.676000000 +0000
+Modify: 2023-06-29 05:33:48.676000000 +0000
+Change: 2023-06-29 05:33:48.676000000 +0000
+ Birth: -
+
+Denis@qap:/dev$ stat /dev/zero
+  File: /dev/zero  - СИМВОЛЬНЫЕ УСТРОЙСТВА
+  Size: 0               Blocks: 0          IO Block: 4096   character special file
+Device: 6h/6d   Inode: 8           Links: 1     Device type: 1,5
+Access: (0666/crw-rw-rw-)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2023-06-29 05:33:48.684000000 +0000
+Modify: 2023-06-29 05:33:48.684000000 +0000
+Change: 2023-06-29 05:33:48.684000000 +0000
+ Birth: -
+
+Denis@qap:/dev$ stat /dev/tty
+  File: /dev/tty - СИМВОЛЬНЫЕ УСТРОЙСТВА
+  Size: 0               Blocks: 0          IO Block: 4096   character special file
+Device: 6h/6d   Inode: 13          Links: 1     Device type: 5,0
+Access: (0666/crw-rw-rw-)  Uid: (    0/    root)   Gid: (    5/     tty)
+Access: 2023-07-03 10:32:57.736000000 +0000
+Modify: 2023-06-29 05:33:48.736000000 +0000
+Change: 2023-06-29 05:33:48.736000000 +0000
+ Birth: -
+
+Denis@qap:/dev$ stat /dev/sda
+stat: cannot stat '/dev/sda': No such file or directory
+
+
+Denis@qap:~$ cd /etc/passwd
+-bash: cd: /etc/passwd: Not a directory
+Denis@qap:~$ stat /etc/passwd
+  File: /etc/passwd  -  ОБЫЧНЫЙ ФАЙЛ
+  Size: 4489            Blocks: 16         IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 2504        Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2023-07-02 14:08:23.925486442 +0000
+Modify: 2023-06-28 14:02:36.306901257 +0000
+Change: 2023-06-28 14:02:36.374903806 +0000
+ Birth: -
+
+Denis@qap:~$ /root
+-bash: /root: Is a directory
+
+
+Denis@qap:~$ stat /proc/mounts
+  File: /proc/mounts -> self/mounts   -  СИМВОЛЬНАЯ ССЫЛКА
+  Size: 11              Blocks: 0          IO Block: 1024   symbolic link
+Device: 5h/5d   Inode: 4026531843  Links: 1
+Access: (0777/lrwxrwxrwx)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2023-07-03 10:54:02.177174361 +0000
+Modify: 2023-07-03 10:54:02.177174361 +0000
+Change: 2023-07-03 10:54:02.177174361 +0000
+ Birth: -
+
+Denis@qap:~$ stat /bin/ls
+  File: /bin/ls - ОБЫЧНЫЙ ФАЙЛ
+  Size: 142144          Blocks: 280        IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 1590        Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2023-07-03 09:23:25.818613106 +0000
+Modify: 2019-09-05 10:38:40.000000000 +0000
+Change: 2022-04-11 21:42:21.315605388 +0000
+ Birth: -
+
+Denis@qap:~$ stat /bin/zcat
+  File: /bin/zcat  -  ОБЫЧНЫЙ ФАЙЛ
+  Size: 1984            Blocks: 8          IO Block: 4096   regular file
+Device: fc01h/64513d    Inode: 7359        Links: 1
+Access: (0755/-rwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2022-09-27 19:59:05.230518393 +0000
+Modify: 2022-04-08 11:05:45.000000000 +0000
+Change: 2022-07-18 06:20:04.600289129 +0000
+ Birth: -
