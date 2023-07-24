@@ -1,0 +1,74 @@
+Задание №1
+    3  -ls
+    5  ls -etc
+   11  ls -a
+   15  ls -la
+   42  ls -la
+   50  ls -la
+   53  ls -la
+   56  ls -la
+   58  ls -la
+   61  ls -la
+   63  ls -la
+   67  ls -la
+   69  ls -la
+   76  ls -l /dev/ | grep "^b"
+   88  find -sda
+  103  sudo -i
+  104  ls -l
+  105  ls -la
+  107  ls -la
+  110  ls -la
+  113  ls -la
+  114  sudo -i
+  117  ls -la
+  120  ls -la
+  123  sudo -i
+  124  ls -la
+  125  tar -xvf homework.tar
+  129  ls -la
+  131  history | grep '-' >> results.txt
+Задание №2
+total 84
+drwx------  8 root root  4096 Jun 26 18:21 .
+drwxr-xr-x 19 root root  4096 Jun 29 05:33 ..
+-rw-------  1 root root 24466 Jul  9 17:39 .bash_history
+-rw-r--r--  1 root root  3106 Dec  5  2019 .bashrc
+drwx------  4 root root  4096 Sep 12  2022 .cache
+-rw-r--r--  1 root root     0 Jun 29 05:33 .cloud-locale-test.skip
+drwx------  3 root root  4096 Jul 27  2022 .config
+drwx------  2 root root  4096 Jan 12 17:53 .docker
+drwxr-xr-x  3 root root  4096 Jul 17  2022 .local
+-rw-r--r--  1 root root   161 Dec  5  2019 .profile
+-rw-r--r--  1 root root    66 Jul 27  2022 .selected_editor
+drwx------  2 root root  4096 May 19 13:35 .ssh
+-rw-------  1 root root  4073 Nov 18  2022 .viminfo
+-rw-r--r--  1 root root   250 Jul  9 17:29 .wget-hsts
+-rwxr-xr-x  1 root root   379 Jun 26 18:21 new_user.sh
+drwx------  3 root root  4096 Jul 17  2022 snap
+Задание №3
+PING google.com (142.250.185.78) 56(84) bytes of data.
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=1 ttl=119 time=0.921 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=2 ttl=119 time=0.435 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=3 ttl=119 time=0.441 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=4 ttl=119 time=0.404 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=5 ttl=119 time=0.386 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=6 ttl=119 time=0.378 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=7 ttl=119 time=0.316 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=8 ttl=119 time=0.476 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=9 ttl=119 time=0.398 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=10 ttl=119 time=0.447 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=11 ttl=119 time=0.445 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=12 ttl=119 time=778 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=13 ttl=119 time=0.413 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=14 ttl=119 time=0.448 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=15 ttl=119 time=0.414 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=16 ttl=119 time=0.494 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=18 ttl=119 time=0.412 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=19 ttl=119 time=0.427 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=20 ttl=119 time=0.375 ms
+64 bytes from fra16s48-in-f14.1e100.net (142.250.185.78): icmp_seq=21 ttl=119 time=0.467 ms
+
+--- google.com ping statistics ---
+21 packets transmitted, 20 received, 4.7619% packet loss, time 20406ms
+rtt min/avg/max/mdev = 0.316/39.319/777.900/169.441 ms
