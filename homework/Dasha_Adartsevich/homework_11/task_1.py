@@ -12,8 +12,8 @@ class Flowers:
     def __str__(self):
         return f'{self.name}: freshness {self.freshness}, length {self.length}, price {self.price}'
 
-    def __repr__(self):
-        return f'{self.name}: freshness {self.freshness}, length {self.length}, price {self.price}'
+    # def __repr__(self):
+    #     return f'{self.name}: freshness {self.freshness}, length {self.length}, price {self.price}'
 
 
 class Rose(Flowers):
