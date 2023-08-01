@@ -1,11 +1,11 @@
 import mysql.connector as mysql
 
 db = mysql.connect(
-   user='user1',
-   password='AVNS_BIPHdghyp1-JLYypm-t',
-   host='db-mysql-fra1-09136-do-user-7651996-0.b.db.ondigitalocean.com',
-   port=25060,
-   database='monstro'
+    user='user1',
+    password='AVNS_BIPHdghyp1-JLYypm-t',
+    host='db-mysql-fra1-09136-do-user-7651996-0.b.db.ondigitalocean.com',
+    port=25060,
+    database='monstro'
 )
 
 cursor = db.cursor(dictionary=True)
@@ -25,9 +25,9 @@ cursor = db.cursor(dictionary=True)
 
 query = 'INSERT INTO students (name, second_name) VALUES (%s, %s)'
 values = [
-   ('Vasia', 'Pupkin'),
-   ('Ivan', 'Ivanov')
-   ]
+    ('Vasia', 'Pupkin'),
+    ('Ivan', 'Ivanov')
+]
 cursor.executemany(query, values)
 db.commit()
 
