@@ -65,7 +65,7 @@ def delete_post():
     post_id = 101
     url = f'https://jsonplaceholder.typicode.com/posts/{post_id}'
     req = request.Request(url, method='DELETE')
-    response = json.load(request.urlopen(req))
+    json.load(request.urlopen(req))
     req = request.Request(url)
     # response = request.urlopen(req).read()
     try:
