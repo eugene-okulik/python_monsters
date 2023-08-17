@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "616b6da1-df20-4000-98bc-c1123179a416",
+		"name": "homework_18_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17733766"
+	},
+	"item": [
+		{
+			"name": "simple link creation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\" : \"https://klika-tech.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "custom option",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"long\" : \"https://klika-tech.com\",\r\n \"custom\": \"klika\"}"
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "custom and useFallback options",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"long\" : \"https://klika-tech.com\",\r\n \"custom\": \"klik\",\r\n \"useFallback\" : false}"
+				},
+				"url": {
+					"raw": "https://gotiny.cc/api",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "json link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gotiny.cc/api/cnrek4?format=json",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"cnrek4"
+					],
+					"query": [
+						{
+							"key": "format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "plain text link",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gotiny.cc/api/cnrek4",
+					"protocol": "https",
+					"host": [
+						"gotiny",
+						"cc"
+					],
+					"path": [
+						"api",
+						"cnrek4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
