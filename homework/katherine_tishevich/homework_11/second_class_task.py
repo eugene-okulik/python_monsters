@@ -1,3 +1,4 @@
+import statistics
 # Создать классы цветов: общий класс для всех цветов и классы для нескольких видов. Создать экземпляры (объекты)
 # цветов разных видов. Собрать букет (букет - еще один класс) с определением его стоимости.
 # В букете цветы пусть хранятся в списке. Это будет список объектов.
@@ -5,6 +6,8 @@
 # Позволить сортировку цветов в букете на основе различных параметров (свежесть/цвет/длина стебля/стоимость)
 # (это тоже методы)
 # Реализовать поиск цветов в букете по каким-нибудь параметрам (например, по среднему времени жизни) (и это тоже метод).
+
+
 class CatalogFlowers:
     def __init__(self, freshness, color, flower_len, cost, day_to_die):
         self.freshness = freshness
@@ -14,34 +17,49 @@ class CatalogFlowers:
         self.day_to_die = day_to_die
 
 
-peonies = CatalogFlowers(freshness=True, color='pink', flower_len=20, cost='5$', day_to_die=5)
-tulips = CatalogFlowers(freshness=True, color='pink', flower_len=15, cost='1$', day_to_die=5)
-irises = CatalogFlowers(freshness=True, color='white', flower_len=30, cost='3$', day_to_die=3)
+class FirstFlower(CatalogFlowers):
+    name = "Iris"
 
 
-class OrchidsFlower(CatalogFlowers):
-    big_orchids = CatalogFlowers(freshness=True, color='white', flower_len=25, cost='45$', day_to_die=10)
-    medium_orchids = CatalogFlowers(freshness=True, color='black', flower_len=25, cost='35$', day_to_die=4)
-    little_orchids = CatalogFlowers(freshness=True, color='white', flower_len=25, cost='15$', day_to_die=15)
+class SecondFlower(CatalogFlowers):
+    name = "Lilia"
 
 
-class RoseFlower(CatalogFlowers):
-    rose_rb = CatalogFlowers(freshness=True, color='white', flower_len=25, cost='7$', day_to_die=7)
-    rose_pl = CatalogFlowers(freshness=True, color='black', flower_len=25, cost='10$', day_to_die=2)
-    rose_neth = CatalogFlowers(freshness=True, color='white', flower_len=25, cost='30$', day_to_die=3)
+class ThirdFlower(CatalogFlowers):
+    name = "Piones"
 
 
-class GiozintFlower(CatalogFlowers):
-    blue_giozint = CatalogFlowers(freshness=True, color='blue', flower_len=10, cost='16$', day_to_die=3)
-    red_giozint = CatalogFlowers(freshness=True, color='red', flower_len=5, cost='11$', day_to_die=5)
-    pink_giozint = CatalogFlowers(freshness=True, color='pink', flower_len=7, cost='22$', day_to_die=7)
+first_flower = FirstFlower(color="white", freshness=True, flower_len=20, cost='5$', day_to_die=5)
+second_flower = SecondFlower(color="yellow", freshness=False, flower_len=30, cost='3$', day_to_die=4)
+third_flower = ThirdFlower(color="pink", freshness=True, flower_len=15, cost='1$', day_to_die=5)
 
 
-class BouquetFlowers(CatalogFlowers):
-    flowers_list = [peonies, tulips, irises, OrchidsFlower.big_orchids, OrchidsFlower.medium_orchids,
-                    OrchidsFlower.little_orchids, RoseFlower.rose_rb, RoseFlower.rose_pl, RoseFlower.rose_neth,
-                    GiozintFlower.blue_giozint, GiozintFlower.red_giozint, GiozintFlower.pink_giozint]
+class Bouquet:
+    def __init__(self, flowers: list = None):
+        self.flowers = flowers
 
-    def bouquet_die(self, flowers_list):
-        average_cost_flower = flowers_list.get(self.day_to_die)
-        print(average_cost_flower / len(flowers_list))
+    def check_when_bouquet_die(self):
+        ckeckers_day = statistics.mean([flowers.day_to_die for flowers in self.flowers])
+        return ckeckers_day
+
+    def flower_color_in_stock(self, color):
+        for flower in self.flowers:
+            if color == flower.color:
+                return flower.name
+
+    def flower_len_sort(self):
+        return sorted(self.flowers, key=lambda flower: flower.flower_len)
+
+    def flower_cost_sort(self):
+        return sorted(self.flowers, key=lambda flower: flower.cost)
+
+    def flower_freshness_sort(self):
+        return sorted(self.flowers, key=lambda flower: flower.freshness)
+
+
+bouquet_for_client = Bouquet(flowers=[first_flower, second_flower, third_flower])
+print(bouquet_for_client.check_when_bouquet_die())
+print(bouquet_for_client.flower_cost_sort())
+print(bouquet_for_client.flower_len_sort())
+print(bouquet_for_client.flower_freshness_sort())
+print(bouquet_for_client.flower_color_in_stock('pink'))
