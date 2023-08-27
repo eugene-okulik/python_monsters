@@ -38,11 +38,9 @@ class Book:
         self.ISBN = isbn
         self.reserve = reserve
 
-    def check_reserve_book(self):
-        return self.reserve
 
     def __str__(self):
-        if self.check_reserve_book():
+        if self.reserve:
             return f'Название: {self.book_name}, Автор: {self.author}, страниц: {self.page_count}, материал: ' \
                    f'{self.page_material}, зарезервирована'
         return f'Название: {self.book_name}, Автор: {self.author}, страниц: {self.page_count}, материал: ' \
@@ -58,7 +56,8 @@ third_book = Book(book_name='python_3', author='author_for_python_3', page_count
 fourth_book = Book(book_name='python_4', author='author_for_python_4', page_count=400, isbn='00000004',
                    reserve=False)
 fifth_book = Book(book_name='python_5', author='author_for_python_5', page_count=500, isbn='00000005',
-                  reserve=True)
+                  reserve=False)
+fifth_book.reserve = True
 books = [first_book, second_book, third_book, fourth_book, fifth_book]
 for book in books:
     print(book)
@@ -70,7 +69,7 @@ class SchoolBooks(Book):
     tasks_in_book = True
 
     def __str__(self):
-        if self.check_reserve_book():
+        if self.reserve:
             return f'Название: {self.book_name}, Автор: {self.author}, страниц: {self.page_count}, предмет: ' \
                    f'{self.subject}, класс: {self.level}, зарезервирована'
         return f'Название: {self.book_name}, Автор: {self.author}, страниц: {self.page_count}, предмет: ' \
@@ -82,7 +81,8 @@ first_lesson_book = SchoolBooks(book_name="Music", author="Rohmaninov", page_cou
 second_lesson_book = SchoolBooks(book_name="History", author="Napoleon", page_count=1, isbn='000000000',
                                  reserve=False)
 third_lesson_book = SchoolBooks(book_name="OOP", author="Оле Джохан Дал и Кристен Нюгорт", page_count=100000,
-                                isbn='100000000', reserve=True)
+                                isbn='100000000', reserve=False)
+third_lesson_book.reserve = True
 school_books = [first_lesson_book, second_lesson_book, third_lesson_book]
 for book in school_books:
     print(book)
