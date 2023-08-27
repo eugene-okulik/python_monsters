@@ -38,7 +38,6 @@ class Book:
         self.ISBN = isbn
         self.reserve = reserve
 
-
     def __str__(self):
         if self.reserve:
             return f'Название: {self.book_name}, Автор: {self.author}, страниц: {self.page_count}, материал: ' \
