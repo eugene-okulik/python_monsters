@@ -63,9 +63,12 @@ for book in books:
 
 
 class SchoolBooks(Book):
-    subject = 'Information Technology'
-    level = 9
     tasks_in_book = True
+
+    def __init__(self, subject, level, book_name, author, page_count, isbn, reserve):
+        super().__init__(book_name, author, page_count, isbn, reserve)
+        self.subject = subject
+        self.level = level
 
     def __str__(self):
         if self.reserve:
@@ -76,11 +79,11 @@ class SchoolBooks(Book):
 
 
 first_lesson_book = SchoolBooks(book_name="Music", author="Rohmaninov", page_count=100, isbn='12323239',
-                                reserve=False)
+                                reserve=False, subject="Music", level=4)
 second_lesson_book = SchoolBooks(book_name="History", author="Napoleon", page_count=1, isbn='000000000',
-                                 reserve=False)
+                                 reserve=False, subject="History", level=8)
 third_lesson_book = SchoolBooks(book_name="OOP", author="Оле Джохан Дал и Кристен Нюгорт", page_count=100000,
-                                isbn='100000000', reserve=False)
+                                isbn='100000000', reserve=False, subject="IT", level=11)
 third_lesson_book.reserve = True
 school_books = [first_lesson_book, second_lesson_book, third_lesson_book]
 for book in school_books:
