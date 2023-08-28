@@ -20,7 +20,6 @@ class QuickStartUser(HttpUser):
 
     @task
     def post_a_meme(self):
-        rnd = random.randrange(432, 4567)
         body = {
             "text": "skdjfhksjdfhksjdfhskdf",
             "url": "slkdfksdhfksjdhkfjsdfh",
